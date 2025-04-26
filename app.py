@@ -89,30 +89,30 @@ if st.button('Predict House Price 💰'):
     }])
     with st.spinner('Predicting the price...'):
         prediction = model.predict(input_data)[0]
-    low_range = prediction * 0.95
-    high_range = prediction * 1.05
+        low_range = prediction * 0.95
+        high_range = prediction * 1.05
 
-    st.success(f"🏡 Estimated House Price: **${prediction:,.2f}**")
-    st.info(f"🔍 Confidence Range: ${low_range:,.0f} - ${high_range:,.0f}")
+        st.success(f"🏡 Estimated House Price: **${prediction:,.2f}**")
+        st.info(f"🔍 Confidence Range: ${low_range:,.0f} - ${high_range:,.0f}")
 
-    st.balloons()
+        st.balloons()
 
-    st.markdown("### 🧾 Property Summary:")
-    st.dataframe(input_data.style.highlight_max(axis=0))
+        st.markdown("### 🧾 Property Summary:")
+        st.dataframe(input_data.style.highlight_max(axis=0))
 
-    # Download prediction
-    prediction_df = input_data.copy()
-    prediction_df['Predicted Price'] = prediction
+        # Download prediction
+        prediction_df = input_data.copy()
+        prediction_df['Predicted Price'] = prediction
 
-    # Create download button
-    csv = prediction_df.to_csv(index=False)
-    b64 = BytesIO(csv.encode()).getvalue()
+        # Create download button
+        csv = prediction_df.to_csv(index=False)
+        b64 = BytesIO(csv.encode()).getvalue()
 
-    st.download_button(
-        label="📥 Download Prediction Report",
-        data=b64,
-        file_name='house_price_prediction.csv',
-        mime='text/csv'
-    )
+        st.download_button(
+            label="📥 Download Prediction Report",
+            data=b64,
+            file_name='house_price_prediction.csv',
+            mime='text/csv'
+        )
 
 
