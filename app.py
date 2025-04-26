@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import pickle
+import time
 from io import BytesIO
 
 # Load trained model
@@ -88,6 +89,7 @@ if st.button('Predict House Price 💰'):
         'Fireplaces': fireplaces
     }])
     with st.spinner('Predicting the price...'):
+        time.sleep(1.5)
         prediction = model.predict(input_data)[0]
         low_range = prediction * 0.95
         high_range = prediction * 1.05
