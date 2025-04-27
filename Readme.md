@@ -13,25 +13,25 @@ This is a Streamlit application that predicts the selling price of a house based
 
 
 ### ✨ Features
-📋 Easy form to input house details
-🏘️ Dropdown selections for neighborhoods, kitchen, basement quality
-🎯 Instant price prediction with confidence range
-📥 Download detailed prediction report (.csv)
-🎈 Smooth animations (spinner, balloons)
-🌟 Professional UI ready for production
+    📋 Easy form to input house details
+    🏘️ Dropdown selections for neighborhoods, kitchen, basement quality
+    🎯 Instant price prediction with confidence range
+    📥 Download detailed prediction report (.csv)
+    🎈 Smooth animations (spinner, balloons)
+    🌟 Professional UI ready for production
 
 
 ### 🚀 How to Run Locally
 
 Clone this repository:
-    git clone https://github.com/your-username/house-price-predictor.git
-    cd house-price-predictor
+        git clone https://github.com/your-username/house-price-predictor.git
+        cd house-price-predictor
 
 Install dependencies:
-    pip install -r requirements.txt
+        pip install -r requirements.txt
 
 Run the Streamlit app:
-    streamlit run app.py
+        streamlit run app.py
 
 Enjoy predicting house prices! 🎯
 
