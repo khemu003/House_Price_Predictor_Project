@@ -57,7 +57,6 @@ house-price-app/
 ├── requirements.txt        # Python Libraries
 
 └── .streamlit/
-
     └── config.toml         # (Optional) Theme Settings
 
 
