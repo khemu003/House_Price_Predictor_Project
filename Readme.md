@@ -13,20 +13,24 @@ This is a Streamlit application that predicts the selling price of a house based
 
 
 ### ✨ Features
+📋 Easy form to input house details
 
-    📋 Easy form to input house details
-    🏘️ Dropdown selections for neighborhoods, kitchen, basement quality
-    🎯 Instant price prediction with confidence range
-    📥 Download detailed prediction report (.csv)
-    🎈 Smooth animations (spinner, balloons)
-    🌟 Professional UI ready for production
+🏘️ Dropdown selections for neighborhoods, kitchen, basement quality
+
+🎯 Instant price prediction with confidence range
+
+📥 Download detailed prediction report (.csv)
+
+🎈 Smooth animations (spinner, balloons)
+
+🌟 Professional UI ready for production
 
 
 ### 🚀 How to Run Locally
 
 Clone this repository:
 
-    git clone https://github.com/your-username/house-price-predictor.git
+    git clone https://github.com/khemu003/house-price-predictor.git
     cd house-price-predictor
 
 Install dependencies:
