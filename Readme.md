@@ -47,6 +47,7 @@ Enjoy predicting house prices! 🎯
 ### 🏗️ Project Structure
 
 house-price-app/
+
 │
 
 ├── app.py                 # Main Streamlit App
