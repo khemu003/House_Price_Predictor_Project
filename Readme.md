@@ -48,10 +48,15 @@ Enjoy predicting house prices! 🎯
 
 house-price-app/
 │
+
 ├── app.py                 # Main Streamlit App
+
 ├── house_price_model.pkl   # Trained ML Model
+
 ├── requirements.txt        # Python Libraries
+
 └── .streamlit/
+
     └── config.toml         # (Optional) Theme Settings
 
 
