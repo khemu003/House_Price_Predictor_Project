@@ -39,25 +39,19 @@ with left_col:
     overall_qual = st.slider("🏆 Overall Quality (1=Very Poor, 10=Excellent)", 1, 10, 5)
     overall_cond = st.slider("🏆 Overall Condition (1=Very Poor, 9=Excellent)", 1, 9, 5)
     gr_liv_area = st.slider("🏠 Above Ground Living Area (sq ft)", 300, 4000, 1500)
-    total_bsmt_sf = st.slider("🏠 Basement Area (sq ft)", 0, 3000, 800)
     first_flr_sf = st.slider("🏠 First Floor Area (sq ft)", 300, 3000, 1000)
     garage_area = st.slider("🚗 Garage Area (sq ft)", 0, 1500, 400)
     lot_area = st.slider("🏡 Lot Size (sq ft)", 1000, 30000, 8000)
-
-with right_col:
-    year_built = st.number_input("🛠️ Year Built", 1800, 2025, 2000)
-    year_remod = st.number_input("🔨 Year Remodeled", 1800, 2025, 2005)
-    
     neighborhood = st.selectbox(
         "📍 Neighborhood (encoded)", 
         options=list(range(0, 26)),
         format_func=lambda x: f"Neighborhood {x}"
     )
-    
-    bsmt_qual = st.selectbox("🏚️ Basement Quality (Encoded 1-5)", [1, 2, 3, 4, 5])
-    bsmtfin_sf1 = st.slider("🏚️ Finished Basement Area (sq ft)", 0, 2000, 500)
+
+with right_col:
+    year_built = st.number_input("🛠️ Year Built", 1800, 2025, 2000)
+    year_remod = st.number_input("🔨 Year Remodeled", 1800, 2025, 2005)
     full_bath = st.selectbox("🛁 Full Bathrooms", [0, 1, 2, 3, 4])
-    bsmt_full_bath = st.selectbox("🛁 Basement Full Bathrooms", [0, 1, 2])
     kitchen_qual = st.selectbox("🍽️ Kitchen Quality (Encoded 1-5)", [1, 2, 3, 4, 5])
     garage_cars = st.selectbox("🚗 Garage Capacity (cars)", [0, 1, 2, 3, 4])
     wood_deck_sf = st.slider("🪵 Wood Deck Area (sq ft)", 0, 800, 100)
@@ -72,17 +66,12 @@ if st.button('Predict House Price 💰'):
         'Overall Qual': overall_qual,
         'Overall Cond': overall_cond,
         'Gr Liv Area': gr_liv_area,
-        'Total Bsmt SF': total_bsmt_sf,
         '1st Flr SF': first_flr_sf,
         'Garage Area': garage_area,
-        'Lot Area': lot_area,
         'Year Built': year_built,
         'Year Remod/Add': year_remod,
         'Neighborhood': neighborhood,
-        'Bsmt Qual': bsmt_qual,
-        'BsmtFin SF 1': bsmtfin_sf1,
         'Full Bath': full_bath,
-        'Bsmt Full Bath': bsmt_full_bath,
         'Kitchen Qual': kitchen_qual,
         'Garage Cars': garage_cars,
         'Wood Deck SF': wood_deck_sf,
